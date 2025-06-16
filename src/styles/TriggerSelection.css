@@ -1,0 +1,88 @@
+.trigger-selection-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #EDF5FA;
+}
+
+.trigger-selection-page a {
+    text-decoration: none;
+}
+
+.title {
+    color: #2400FF;
+    font-weight: 100;
+    font-size: 45px;
+}
+
+.trigger-options {
+    display: grid;
+    gap: 10px 20px;
+    justify-items: center;
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 100px;
+}
+
+.trigger-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.trigger-name {
+    font-size: 20px;
+}
+
+.trigger-icon {
+height: 100px;
+width: 100px;
+}
+  
+.trigger-icon svg {
+height: 100%;
+width: 100%;
+}
+
+.done-button {
+    height: 80px;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20%;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    user-select: none;
+    position: absolute; /* Position the button absolutely */
+    bottom: 70px; /* Distance from the bottom of the container */
+    right: 70px; /* Distance from the right of the container */
+}
+
+.done-button  p {
+    font-size: 30px;
+    color: #2400FF;
+}
+
+.error-message {
+    color: red;
+    font-weight: 500;
+    margin: 10px 0;
+    position: fixed;
+    bottom: 10%;
+}
+
+
+.trigger-icon-wrapper {
+    margin-top: 10px;
+    height: 110px;
+    width: 110px;
+    border-radius: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.trigger-icon-wrapper.selected {
+background-color: #d9d9d961;
+}

@@ -1,0 +1,192 @@
+.session-result-page {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #EDF5FA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.radial-gradient-bg {
+    width: calc(972.02px * 0.5); /* ~680.41px */
+    height: calc(1053.29px * 0.5); /* ~737.3px */
+    position: absolute;
+    left: 27%;
+    background: radial-gradient(
+      ellipse 50% 50% at 50% 50%,
+      rgba(250, 221, 78, 0.48) 25%,
+      rgba(0, 255, 209, 0.48) 62%,
+      rgba(36, 0, 255, 0.48) 93%
+    );
+    box-shadow: 200px 200px 200px rgba(0, 0, 0, 0.2); /* optional shadow tint */
+    filter: blur(100px);
+}
+  
+.glass-blur-overlay {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(255, 255, 255, 0.21);
+    backdrop-filter: blur(100px);
+}
+
+.result-container {
+    height: 600px;
+    width: 600px;
+    border-radius: 25%;
+    background-color: #EDF5FA;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-svg-container {
+    height: 450px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container styling */
+.name-input {
+    position: relative;
+    width: 400px;
+    margin-top: 20px;
+}
+  
+  /* Minimal input field styling */
+  .minimal-input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #333;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  /* Focus effect on input */
+  .minimal-input:focus {
+    border-color: transparent;
+    box-shadow: none;
+    border-image: linear-gradient(90deg, #1f8bff, #ff5edf);
+    border-image-slice: 1;
+  }
+  
+  /* Label styling */
+  .input-label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    font-size: 16px;
+    color: #aaa;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: 0.3s ease all;
+    font-weight: normal;
+  }
+  
+  /* Focus effect on label when input is focused or has value */
+  .minimal-input:focus ~ .input-label,
+  .minimal-input:not(:placeholder-shown) ~ .input-label {
+    top: -10px;
+    font-size: 12px;
+    color: rgb(74, 46, 255);
+    font-weight: bold;
+  }
+  
+  /* Styling for placeholder text */
+  .minimal-input::placeholder {
+    color: transparent; /* Hides the placeholder text */
+  }
+  
+  .wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  button{
+    font-family: 'Ubuntu', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: 170px;
+    height: 40px;
+    line-height: 1;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 0px solid #2400FF;
+    background: #fff;
+    color: #2400FF;
+    border-radius: 40px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .35s;
+  }
+  
+  button:hover{
+    background: #2400FF;
+    color: #fff;
+  }
+  
+  button span{
+    opacity: 1;
+    visibility: visible;
+    transition: all .35s;
+  }
+  
+  .success{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .35s;
+  }
+  
+  .success svg{
+    width: 20px;
+    height: 20px;
+    fill: yellowgreen;
+    transform-origin: 50% 50%;
+    transform: translateY(-50%) rotate(0deg) scale(0);
+    transition: all .35s;
+  }
+  
+  button.is_active{
+    width: 40px;
+    height: 40px;
+  }
+  
+  button.is_active .success{
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  button.is_active .success svg{
+    margin-top: 50%;
+    transform: translateY(-50%) rotate(720deg) scale(1);
+  }
+  
+  button.is_active span{
+    opacity: 0;
+    visibility: hidden;
+  }

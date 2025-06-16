@@ -1,0 +1,54 @@
+.background {
+    position: absolute;
+    left: 27%;
+    z-index: 0;
+    width: 45vw;
+    height: 95vh;
+    background: linear-gradient(180deg, #2400FF 0%, #00FFD1 100%);
+    filter: blur(100px);
+    border-radius: 70%;
+}
+
+.lets-begin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lets-begin-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.lb-message, .text-title {
+    font-size: 80px;
+    font-weight: 100;
+    color: white;
+}
+
+.text-subtitle {
+    font-size: 40px;
+    color: white;
+}
+
+.text-title, .text-subtitle {
+    margin: 0;
+}
+
+.text-container {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+/* .svg-animation-container {
+    position: fixed;
+    z-index: 4;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10;
+} */

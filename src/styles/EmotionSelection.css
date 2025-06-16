@@ -1,0 +1,61 @@
+.emotion-selection-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #EDF5FA;
+}
+
+.title {
+    color: #2400FF;
+    font-weight: 100;
+    font-size: 45px;
+}
+
+.emotion-options {
+    display: grid;
+    gap: 10px 90px;
+    justify-items: center;
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 100px;
+}
+
+.emotion-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.emotion-name {
+    font-size: 20px;
+}
+
+.emotion-color {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin: 10px 0;
+}
+
+.emotion-color-wrapper {
+    margin-top: 10px;
+    height: 80px;
+    width: 80px;
+    border-radius: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.emotion-color-wrapper.selected {
+    background-color: #d9d9d961;
+}
+
+.error-message {
+    color: red;
+    font-weight: 500;
+    margin: 10px 0;
+    position: fixed;
+    bottom: 3%;
+}

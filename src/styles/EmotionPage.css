@@ -1,0 +1,114 @@
+
+  .emotion-page-background {
+    position: absolute;
+    left: 27%;
+    bottom: 10%;
+    width: 680.414px;
+    height: 737.303px;
+    background: conic-gradient(from 180deg at 50.00% 50.00%, rgba(35.70, 0, 255, 0.52) 0deg, rgba(0, 255, 209.10, 0.52) 167deg, rgba(250, 221, 78, 0.52) 360deg);
+    filter: blur(100px);
+    z-index: -1;
+  }
+
+  .emotion-page {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .bubbles-scroll-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .bubbles-scroll-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  .bubbles-scroll-wrapper {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .bubble-page {
+    scroll-snap-align: start;
+    flex: 0 0 100vw;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 70px;
+    justify-content: center;
+    align-content: center;
+    padding: 60px;
+    box-sizing: border-box;
+  }
+  
+  .submitted-bubble {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .submitted-bubble:hover {
+    transform: scale(1.2);
+  }
+  .submitted-bubble:hover .bubble-name {
+    opacity: 1;
+  }
+  
+  .bubble-name {
+    position: absolute;
+    bottom: -28px;
+    background: rgba(102, 102, 102, 0.7);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    max-width: 120px;
+    text-align: center;
+    word-wrap: break-word;
+    z-index: 99;
+  }
+  
+  .page-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 100;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #888;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .dot.active {
+    background-color: #fff;
+  }
+  
+  .empty-message {
+    color: white;
+    font-weight: 500;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .finished-button {
+    position: fixed;
+    left: 50%;
+    top: 88%;
+    border: 1px solid black;
+  }

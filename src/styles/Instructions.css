@@ -1,0 +1,26 @@
+.instructions-comp {
+    color: white;
+    text-align: center;
+    user-select: none;
+}
+
+.dropdown {
+    font-size: 60px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.dropdown-content {
+    font-size: 30px;
+}
+
+.dropdown-content p {
+    padding-bottom: 6px;
+}
+
+.instruction-button {
+    position: fixed;
+    bottom: 30%;
+    top: auto;
+    left: auto;
+}
