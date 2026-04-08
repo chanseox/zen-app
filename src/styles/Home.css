@@ -16,6 +16,7 @@
   justify-content: center;
   gap: 8px;
   z-index: 10;
+  width: 100%;
 }
 
 .title-container {
