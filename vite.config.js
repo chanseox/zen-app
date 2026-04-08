@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/zen-app/',
+  base: '/zen-app/', 
   build: {
     outDir: 'docs'
   }

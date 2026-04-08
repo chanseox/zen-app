@@ -1,0 +1,26 @@
+/* Add this to your existing MeditationSession.css */
+
+.back-button {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  z-index: 100;
+  padding: 10px 20px;
+  border: 1px solid rgba(129, 140, 248, 0.4);
+  background: rgba(255, 255, 255, 0.55);
+  color: #5046e5;
+  font-family: 'Inter', Avenir, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  border-radius: 40px;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  transition: background 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(99, 102, 241, 0.6);
+  color: #4338ca;
+}
