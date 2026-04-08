@@ -16,6 +16,9 @@ export default function Home () {
 
       {showInstructions && (
         <div className='overlay'>
+          <div className='title-container'>
+            <h1 className='title-message'>Zen</h1>
+          </div>
           <Instructions onClose={handleCloseInstructions} />
         </div>
       )}
@@ -26,7 +29,7 @@ export default function Home () {
             <PressToStart />
           </div>
           <div className='title-container'>
-            <h1 className='title-message'>Let's Meditate</h1>
+            <h1 className='title-message'>Zen</h1>
           </div>
         </>
       )}

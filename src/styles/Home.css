@@ -1,52 +1,55 @@
 .home-page {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* full screen height */
-    position: relative;
-    position: relative;
-    z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  z-index: 0;
+  background: #f0eeff;
 }
 
-.instructions {
-    position: absolute;
-    top: 40px;
-    right: 35px;
+.overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  z-index: 10;
 }
 
 .title-container {
-    position: fixed;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
+  text-align: center;
 }
 
-/*TODO: style after getting correct font*/
-.title-message{
-    color: white; /* temp color, end will be white */
-    font-size: 100px;
-    font-weight: 100;
+.title-message {
+  font-family: 'Inter', Avenir, Helvetica, Arial, sans-serif;
+  font-size: 80px;
+  font-weight: 200;
+  letter-spacing: 14px;
+  margin: 0 0 8px 0;
+  background: linear-gradient(135deg, #a855f7, #6366f1, #0ea5e9, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: uppercase;
 }
 
 .start-button {
-    position: fixed;
-    bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 150px;
+  margin-top: 40px;
 }
 
 .home-background {
-    position: absolute;
-    left: 50%;
-    bottom: -11%;
-    transform: translateX(-50%);
-    z-index: 0;
-    width: 60vw;
-    height: 75vh;
-    background: linear-gradient(180deg, #2400FF 0%, #00FFD1 100%);
-    filter: blur(120px);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: -1;
+  position: absolute;
+  left: 50%;
+  bottom: -11%;
+  transform: translateX(-50%);
+  width: 65%;
+  height: 78%;
+  background: linear-gradient(180deg, #c084fc 0%, #818cf8 30%, #38bdf8 65%, #67e8f9 100%);
+  filter: blur(100px);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.55;
+  z-index: -1;
 }
