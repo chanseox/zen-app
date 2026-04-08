@@ -1,23 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../styles/Instructions.css';
 
 function Instructions({ onClose }) {
-
   return (
     <div className="instructions-comp">
-    <div
-      className="dropdown"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <span>INSTRUCTIONS</span>
-      </div>
-        <div className="dropdown-content">
-          <p>1. Pick up the plant. </p>
-          <p>2. Put on the headphones. </p>
-          <p>3. Press Zen to start your meditation. </p>
+      <p className="instructions-title">Instructions</p>
+      <div className="instructions-steps">
+        <div className="instruction-step">
+          <div className="step-num">1</div>
+          <p className="step-text">Pick up the plant and hold it gently</p>
         </div>
-        <button className="instruction-button" onClick={onClose}>Continue</button>
+        <div className="instruction-step">
+          <div className="step-num">2</div>
+          <p className="step-text">Put on the headphones</p>
+        </div>
+        <div className="instruction-step">
+          <div className="step-num">3</div>
+          <p className="step-text">Press Zen to start your meditation</p>
+        </div>
+      </div>
+      <button className="instruction-button" onClick={onClose}>Continue</button>
     </div>
   );
 }
