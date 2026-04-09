@@ -1,13 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
 .instructions-comp {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding: 20px 0 40px;
-  max-width: 480px;
-  width: 100vw;
-  margin: 0 auto;
-  box-sizing: border-box;
+  width: 420px;
   user-select: none;
 }
 
@@ -20,16 +20,13 @@
   color: #7c6fa0;
   margin: 0;
   text-align: center;
-  width: 100%;
 }
 
 .instructions-steps {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 100%;
-  padding: 0 44px;
-  box-sizing: border-box;
+  width: 420px;
 }
 
 .instruction-step {
@@ -41,7 +38,7 @@
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.55);
   backdrop-filter: blur(16px);
-  box-sizing: border-box;
+  width: 420px;
 }
 
 .step-num {
@@ -85,8 +82,8 @@
 }
 
 .instruction-button {
-  width: 100%;
-  padding: 14px 44px;
+  width: 420px;
+  padding: 14px;
   border: 1px solid rgba(129, 140, 248, 0.4);
   background: rgba(255, 255, 255, 0.6);
   color: #5046e5;
@@ -100,8 +97,6 @@
   backdrop-filter: blur(12px);
   transition: background 0.3s, border-color 0.3s, color 0.3s;
   position: static;
-  box-sizing: border-box;
-  max-width: 392px;
 }
 
 .instruction-button:hover {

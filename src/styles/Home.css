@@ -1,12 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
 .home-page {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   position: relative;
   z-index: 0;
   background: #f0eeff;
+  overflow: hidden;
 }
 
 .overlay {
@@ -14,17 +18,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  z-index: 10;
   width: 100%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  z-index: 10;
 }
 
 .title-container {
   text-align: center;
+  width: 100%;
 }
 
 .title-message {
@@ -38,10 +38,14 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .start-button {
   margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .home-background {
