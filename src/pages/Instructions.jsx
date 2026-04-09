@@ -18,8 +18,8 @@ function Instructions({ onClose }) {
           <div className="step-num">3</div>
           <p className="step-text">Press Zen to start your meditation</p>
         </div>
+        <button className="instruction-button" onClick={onClose}>Continue</button>
       </div>
-      <button className="instruction-button" onClick={onClose}>Continue</button>
     </div>
   );
 }
