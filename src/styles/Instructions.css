@@ -97,7 +97,10 @@
   cursor: pointer;
   backdrop-filter: blur(12px);
   transition: background 0.3s, border-color 0.3s, color 0.3s;
-  position: static;
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
 }
 
 .instruction-button:hover {
