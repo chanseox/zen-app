@@ -8,6 +8,7 @@ import TriggerSelection from './pages/TriggerSelection'
 import EmotionSelection from './pages/EmotionSelection'
 import SessionResult from './pages/SessionResult'
 import Camera from './components/Camera'
+import DataViz from './pages/DataViz'
 
 function App () {
   return (
@@ -21,7 +22,8 @@ function App () {
           <Route path='/trigger_selection' element={<TriggerSelection />} />
           <Route path='/emotion_selection' element={<EmotionSelection />} />
           <Route path='/meditation_result' element={<SessionResult />} />
-          <Route path="/camera" element={<Camera />} />
+          <Route path='/camera' element={<Camera />} />
+          <Route path='/dataviz' element={<DataViz />} />
         </Routes>
       </Router>
     </>
