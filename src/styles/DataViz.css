@@ -5,6 +5,7 @@
   position: relative;
   overflow-x: hidden;
   padding: 28px 32px 48px;
+  box-sizing: border-box;
 }
 
 .dv-orb1 {
@@ -36,6 +37,7 @@
   pointer-events: none;
 }
 
+/* Header */
 .dv-header {
   display: flex;
   align-items: center;
@@ -43,7 +45,7 @@
   margin-bottom: 20px;
   position: relative;
   z-index: 1;
-  padding-left: 110px;
+  padding-left: 116px;
 }
 
 .dv-title {
@@ -84,6 +86,7 @@
   background: rgba(255, 255, 255, 0.85) !important;
 }
 
+/* Stats */
 .dv-stats {
   display: flex;
   gap: 12px;
@@ -93,13 +96,13 @@
 }
 
 .dv-stat-card {
-  padding: 12px 20px;
+  padding: 12px 24px;
   background: rgba(255, 255, 255, 0.55);
   border: 1px solid rgba(168, 139, 250, 0.2);
   border-radius: 14px;
   text-align: center;
   backdrop-filter: blur(12px);
-  min-width: 80px;
+  min-width: 88px;
 }
 
 .dv-stat-num {
@@ -118,6 +121,7 @@
   margin-top: 4px;
 }
 
+/* Grid */
 .dv-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -130,7 +134,7 @@
   background: rgba(255, 255, 255, 0.5);
   border: 1px solid rgba(168, 139, 250, 0.15);
   border-radius: 16px;
-  padding: 18px 20px;
+  padding: 20px 22px;
   backdrop-filter: blur(16px);
 }
 
@@ -144,16 +148,17 @@
   letter-spacing: 3px;
   text-transform: uppercase;
   color: #7c6fa0;
-  margin-bottom: 14px;
+  margin: 0 0 14px;
 }
 
 .dv-no-data {
   font-size: 12px;
   font-weight: 300;
   color: #9b8ec4;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   text-align: center;
-  padding: 16px 0;
+  padding: 20px 0;
+  font-style: italic;
 }
 
 /* Emotion frequency */
@@ -161,14 +166,16 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 8px;
+  margin-bottom: 9px;
 }
+
+.dv-bar-row:last-child { margin-bottom: 0; }
 
 .dv-bar-label {
   font-size: 11px;
   font-weight: 300;
   color: #3b3057;
-  width: 80px;
+  width: 84px;
   flex-shrink: 0;
 }
 
@@ -198,14 +205,15 @@
 .dv-wheel-wrap {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
 }
 
 .dv-wheel-legend {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 7px;
   flex: 1;
+  min-width: 0;
 }
 
 .dv-legend-item {
@@ -215,6 +223,9 @@
   font-size: 11px;
   font-weight: 300;
   color: #3b3057;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .dv-legend-dot {
@@ -229,13 +240,15 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8px;
+  margin-bottom: 9px;
 }
+
+.dv-plant-row:last-child { margin-bottom: 0; }
 
 .dv-plant-date {
   font-size: 10px;
   color: #9b8ec4;
-  width: 50px;
+  width: 52px;
   flex-shrink: 0;
 }
 
@@ -243,8 +256,11 @@
   font-size: 11px;
   font-weight: 300;
   color: #3b3057;
-  width: 80px;
-  flex-shrink: 0;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .dv-plant-status {
@@ -252,38 +268,32 @@
   font-weight: 300;
   padding: 3px 10px;
   border-radius: 20px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
-.dv-status-good {
-  background: rgba(99, 230, 190, 0.2);
-  color: #0f6e56;
-}
-
-.dv-status-ok {
-  background: rgba(250, 221, 78, 0.2);
-  color: #854f0b;
-}
-
-.dv-status-bad {
-  background: rgba(226, 75, 74, 0.2);
-  color: #a32d2d;
-}
+.dv-status-good { background: rgba(99, 230, 190, 0.2); color: #0f6e56; }
+.dv-status-ok   { background: rgba(250, 221, 78, 0.2);  color: #854f0b; }
+.dv-status-bad  { background: rgba(226, 75, 74, 0.2);   color: #a32d2d; }
 
 /* Word cloud */
 .dv-wordcloud {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  align-items: center;
+  gap: 10px 12px;
+  align-items: baseline;
   padding: 4px 0;
 }
 
 .dv-word {
   font-weight: 300;
-  line-height: 1;
+  line-height: 1.2;
+  cursor: default;
   transition: opacity 0.2s;
 }
+
+.dv-word:hover { opacity: 1 !important; }
 
 /* Empty state */
 .dv-empty {
@@ -309,7 +319,6 @@
   font-size: 12px;
   font-weight: 300;
   color: #9b8ec4;
-  letter-spacing: 0.5px;
 }
 
 .dv-start-btn {
@@ -335,6 +344,22 @@
   line-height: normal !important;
 }
 
-.dv-start-btn:hover {
-  opacity: 0.85 !important;
+.dv-start-btn:hover { opacity: 0.85 !important; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .dv-grid {
+    grid-template-columns: 1fr;
+  }
+  .dv-card-wide {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .dv-page { padding: 80px 16px 40px; }
+  .dv-header { padding-left: 90px; }
+  .dv-stats { flex-wrap: wrap; }
+  .dv-stat-card { flex: 1; min-width: 72px; padding: 10px 12px; }
+  .dv-stat-num { font-size: 22px; }
 }
