@@ -112,7 +112,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   align-content: start;
-  padding: 24px 40px 60px;
+  padding: 90px 40px 60px;
   box-sizing: border-box;
   position: relative;
   z-index: 10;
