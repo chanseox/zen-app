@@ -24,14 +24,13 @@ export default function Home () {
       )}
 
       {!showInstructions && (
-        <>
-          <div className='start-button'>
-            <PressToStart />
-          </div>
-          <div className='title-container'>
-            <h1 className='title-message'>Zen</h1>
-          </div>
-        </>
+        <div className='main-screen'>
+          <button className='back-to-instructions' onClick={() => setShowInstructions(true)}>
+            ← Back
+          </button>
+          <h1 className='title-message'>Zen</h1>
+          <PressToStart />
+        </div>
       )}
     </div>
   )

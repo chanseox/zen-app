@@ -22,6 +22,16 @@
   z-index: 10;
 }
 
+.main-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  z-index: 10;
+  position: relative;
+}
+
 .title-container {
   text-align: center;
   width: 100%;
@@ -42,10 +52,37 @@
 }
 
 .start-button {
-  margin-top: 40px;
+  margin-top: 16px;
   display: flex;
   justify-content: center;
   width: 100%;
+}
+
+.back-to-instructions {
+  position: fixed !important;
+  top: 24px !important;
+  left: 120px !important;
+  padding: 10px 24px !important;
+  border: 1px solid rgba(129, 140, 248, 0.4) !important;
+  background: rgba(255, 255, 255, 0.6) !important;
+  color: #5046e5 !important;
+  font-family: 'Inter', Avenir, Helvetica, Arial, sans-serif;
+  font-size: 11px !important;
+  font-weight: 300 !important;
+  letter-spacing: 2px;
+  border-radius: 40px !important;
+  cursor: pointer !important;
+  backdrop-filter: blur(12px);
+  transition: background 0.3s, border-color 0.3s !important;
+  transform: none !important;
+  width: auto !important;
+  height: auto !important;
+  line-height: normal !important;
+}
+
+.back-to-instructions:hover {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border-color: rgba(99, 102, 241, 0.6) !important;
 }
 
 .home-background {
