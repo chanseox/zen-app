@@ -40,7 +40,7 @@
   z-index: 10;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 28px 40px 0;
 }
 
@@ -54,13 +54,16 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .finished-button {
-  padding: 8px 24px;
-  border: 1px solid rgba(129, 140, 248, 0.4) !important;
-  background: rgba(255, 255, 255, 0.6) !important;
-  color: #5046e5 !important;
+  padding: 12px 32px;
+  border: 1px solid rgba(99, 102, 241, 0.6) !important;
+  background: linear-gradient(135deg, #a855f7, #6366f1) !important;
+  color: white !important;
   font-family: 'Inter', Avenir, Helvetica, Arial, sans-serif;
   font-size: 11px !important;
   font-weight: 300 !important;
@@ -69,7 +72,7 @@
   border-radius: 40px !important;
   cursor: pointer;
   backdrop-filter: blur(12px);
-  transition: background 0.3s, border-color 0.3s !important;
+  transition: opacity 0.3s !important;
   position: static !important;
   top: auto !important;
   left: auto !important;
@@ -77,12 +80,11 @@
   width: auto !important;
   height: auto !important;
   line-height: normal !important;
+  margin-left: auto;
 }
 
 .finished-button:hover {
-  background: rgba(255, 255, 255, 0.85) !important;
-  border-color: rgba(99, 102, 241, 0.6) !important;
-  color: #4338ca !important;
+  opacity: 0.85 !important;
 }
 
 .bubbles-scroll-wrapper {
