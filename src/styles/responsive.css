@@ -1,0 +1,393 @@
+/* ============================================
+   ZEN APP — RESPONSIVE STYLES
+   Breakpoints:
+   - Mobile:  max-width 480px
+   - Tablet:  max-width 768px
+   - Desktop: max-width 1024px
+   ============================================ */
+
+/* ---- GLOBAL ---- */
+@media (max-width: 768px) {
+  #root {
+    overflow-x: hidden;
+  }
+}
+
+/* ---- MENU ---- */
+@media (max-width: 768px) {
+  .menu-component {
+    top: 12px;
+    left: 12px;
+  }
+
+  .menu-background.visible {
+    width: 70vw;
+  }
+
+  .menu-dropdown .link {
+    font-size: 18px;
+    padding: 8px 12px;
+  }
+}
+
+/* ---- HOME / LANDING ---- */
+@media (max-width: 768px) {
+  .title-message {
+    font-size: 52px !important;
+    letter-spacing: 8px !important;
+  }
+
+  .overlay {
+    padding: 0 16px;
+  }
+
+  .main-screen {
+    padding: 0 16px;
+  }
+
+  .back-to-instructions {
+    left: 90px !important;
+    top: 16px !important;
+    font-size: 10px !important;
+    padding: 8px 16px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-message {
+    font-size: 40px !important;
+    letter-spacing: 6px !important;
+  }
+}
+
+/* ---- INSTRUCTIONS ---- */
+@media (max-width: 768px) {
+  .instructions-comp {
+    width: 100% !important;
+    padding: 16px 24px 32px !important;
+  }
+
+  .instructions-steps {
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  .instruction-step {
+    width: 100% !important;
+    padding: 12px 16px !important;
+  }
+
+  .instruction-button {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* ---- TRIGGER SELECTION ---- */
+@media (max-width: 1024px) {
+  .trigger-options {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 12px 16px !important;
+    margin-top: 60px !important;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .trigger-selection-page .title {
+    font-size: 22px !important;
+    letter-spacing: 1px !important;
+    padding: 0 16px;
+    text-align: center;
+  }
+
+  .trigger-options {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px 12px !important;
+    margin-top: 48px !important;
+    padding: 0 16px;
+  }
+
+  .trigger-icon-wrapper {
+    height: 90px !important;
+    width: 90px !important;
+  }
+
+  .trigger-icon {
+    height: 70px !important;
+    width: 70px !important;
+  }
+
+  .trigger-name {
+    font-size: 11px !important;
+  }
+
+  .done-button {
+    bottom: 20px !important;
+    right: 20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .trigger-options {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .trigger-icon-wrapper {
+    height: 80px !important;
+    width: 80px !important;
+  }
+}
+
+/* ---- EMOTION SELECTION ---- */
+@media (max-width: 1024px) {
+  .emotion-options {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 12px 24px !important;
+    margin-top: 60px !important;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .emotion-selection-page .title {
+    font-size: 22px !important;
+    letter-spacing: 1px !important;
+    padding: 0 16px;
+    text-align: center;
+  }
+
+  .emotion-options {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 10px 16px !important;
+    margin-top: 48px !important;
+    padding: 0 16px;
+  }
+
+  .emotion-color {
+    height: 48px !important;
+    width: 48px !important;
+  }
+
+  .emotion-color-wrapper {
+    height: 72px !important;
+    width: 72px !important;
+  }
+
+  .emotion-name {
+    font-size: 11px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .emotion-options {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px 12px !important;
+  }
+
+  .emotion-color {
+    height: 40px !important;
+    width: 40px !important;
+  }
+
+  .emotion-color-wrapper {
+    height: 64px !important;
+    width: 64px !important;
+  }
+}
+
+/* ---- SESSION RESULT ---- */
+@media (max-width: 900px) {
+  .result-layout {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 24px !important;
+    padding: 80px 24px 40px !important;
+  }
+
+  .result-bubble-side svg,
+  .result-bubble-side > div {
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  .result-form-side {
+    width: 100% !important;
+    max-height: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .result-layout {
+    padding: 72px 16px 32px !important;
+  }
+
+  .result-bubble-side svg,
+  .result-bubble-side > div {
+    width: 160px !important;
+    height: 160px !important;
+  }
+}
+
+/* ---- RESULTS GALLERY ---- */
+@media (max-width: 1024px) {
+  .bubble-page {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 16px !important;
+    padding: 80px 24px 60px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-header {
+    padding: 16px 20px 0 !important;
+  }
+
+  .gallery-title {
+    font-size: 10px !important;
+  }
+
+  .bubble-page {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+    padding: 72px 16px 60px !important;
+  }
+
+  .submitted-bubble {
+    padding: 14px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .bubble-page {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+    padding: 64px 12px 60px !important;
+  }
+}
+
+/* ---- DATA VIZ ---- */
+@media (max-width: 1024px) {
+  .dv-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .dv-card-wide {
+    grid-column: span 1 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .dv-page {
+    padding: 80px 16px 40px !important;
+  }
+
+  .dv-header {
+    padding-left: 90px !important;
+  }
+
+  .dv-stats {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+
+  .dv-stat-card {
+    flex: 1 !important;
+    min-width: 70px !important;
+    padding: 10px 12px !important;
+  }
+
+  .dv-stat-num {
+    font-size: 22px !important;
+  }
+
+  .dv-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .dv-card-wide {
+    grid-column: span 1 !important;
+  }
+
+  .dv-wheel-wrap {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .dv-bar-label {
+    width: 70px !important;
+    font-size: 10px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .dv-page {
+    padding: 72px 12px 32px !important;
+  }
+
+  .dv-header {
+    padding-left: 80px !important;
+  }
+
+  .dv-title {
+    font-size: 10px !important;
+    letter-spacing: 3px !important;
+  }
+}
+
+/* ---- PRESS TO START ---- */
+@media (max-width: 768px) {
+  .pts-wrapper {
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  .center-text {
+    font-size: 26px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .pts-wrapper {
+    width: 170px !important;
+    height: 170px !important;
+  }
+
+  .center-text {
+    font-size: 22px !important;
+  }
+}
+
+/* ---- MEDITATION SESSION ---- */
+@media (max-width: 768px) {
+  .lb-message,
+  .text-title {
+    font-size: 48px !important;
+  }
+
+  .text-subtitle {
+    font-size: 24px !important;
+  }
+
+  .back-button {
+    top: 16px !important;
+    left: 90px !important;
+    font-size: 10px !important;
+    padding: 8px 16px !important;
+  }
+
+  .webcam {
+    width: 90vw !important;
+    height: 60vw !important;
+    top: 20% !important;
+    border-radius: 45vw !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .lb-message,
+  .text-title {
+    font-size: 36px !important;
+  }
+}
