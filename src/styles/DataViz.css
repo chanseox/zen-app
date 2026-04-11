@@ -4,7 +4,7 @@
   font-family: 'Inter', Avenir, Helvetica, Arial, sans-serif;
   position: relative;
   overflow-x: hidden;
-  padding: 28px 32px 48px;
+  padding: 36px 32px 48px;
   box-sizing: border-box;
 }
 
@@ -45,7 +45,7 @@
   margin-bottom: 20px;
   position: relative;
   z-index: 1;
-  padding-left: 116px;
+  padding-left: 130px;
 }
 
 .dv-title {
@@ -93,6 +93,7 @@
   margin-bottom: 16px;
   position: relative;
   z-index: 1;
+  padding-left: 130px;
 }
 
 .dv-stat-card {
@@ -356,10 +357,10 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .dv-page { padding: 80px 16px 40px; }
   .dv-header { padding-left: 90px; }
-  .dv-stats { flex-wrap: wrap; }
+  .dv-stats { padding-left: 90px; flex-wrap: wrap; }
   .dv-stat-card { flex: 1; min-width: 72px; padding: 10px 12px; }
   .dv-stat-num { font-size: 22px; }
 }
