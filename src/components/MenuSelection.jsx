@@ -49,18 +49,18 @@ export default function MenuSelection () {
 
       <button className='menu-trigger' onClick={open} aria-label='Open menu'>
         <ReactCurvedText
-          width={56}
-          height={56}
-          cx={28}
-          cy={28}
-          rx={18}
-          ry={18}
+          width={100}
+          height={100}
+          cx={50}
+          cy={50}
+          rx={33.3}
+          ry={33.3}
           startOffset={0}
           reversed
-          text='MENU · MENU · MENU · MENU · '
+          text='MENU MENU MENU MENU MENU MENU MENU '
           textProps={{
-            style: { fontSize: 5.5 },
-            textLength: 113,
+            style: { fontSize: 7 },
+            textLength: 360,
             lengthAdjust: 'spacing'
           }}
           textPathProps={null}

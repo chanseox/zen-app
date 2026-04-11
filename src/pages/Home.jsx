@@ -16,21 +16,25 @@ export default function Home () {
 
       {showInstructions && (
         <div className='overlay'>
-          <div className='title-container'>
-            <h1 className='title-message'>Zen</h1>
-          </div>
           <Instructions onClose={handleCloseInstructions} />
         </div>
       )}
 
       {!showInstructions && (
-        <div className='main-screen'>
-          <button className='back-to-instructions' onClick={() => setShowInstructions(true)}>
-            ← Back
-          </button>
-          <h1 className='title-message'>Zen</h1>
-          <PressToStart />
-        </div>
+        <>
+          <div className='start-section'>
+            <PressToStart />
+            <button
+              className='back-to-instructions'
+              onClick={() => setShowInstructions(true)}
+            >
+              ← Back to instructions
+            </button>
+          </div>
+          <div className='title-container'>
+            <h1 className='title-message'>Let's Meditate</h1>
+          </div>
+        </>
       )}
     </div>
   )
