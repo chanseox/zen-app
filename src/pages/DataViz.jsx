@@ -208,8 +208,15 @@ export default function DataViz () {
               {moodPoints.length < 2 ? (
                 <p className='dv-no-data'>Need at least 2 sessions with dates to show trend</p>
               ) : (
-                <div style={{ width: '100%', overflowX: 'auto' }}>
-                  <svg width="100%" height="100" viewBox="0 0 700 100" preserveAspectRatio="none">
+                <div style={{ width: '100%', position: 'relative' }}>
+                  {/* SVG for the line — fixed viewBox, no stretching */}
+                  <svg
+                    width="100%"
+                    height="80"
+                    viewBox="0 0 700 80"
+                    preserveAspectRatio="xMidYMid meet"
+                    style={{ display: 'block' }}
+                  >
                     <defs>
                       <linearGradient id="moodgrad" x1="0" y1="0" x2="0" y2="1">
                         <stop offset="0%" stopColor="#818cf8" stopOpacity="0.25"/>
@@ -219,23 +226,48 @@ export default function DataViz () {
                     {(() => {
                       const n = moodPoints.length
                       const xs = moodPoints.map((_, i) => 20 + (i / (n - 1)) * 660)
-                      const ys = moodPoints.map(p => 10 + ((100 - p.score) / 100) * 65)
+                      const ys = moodPoints.map(p => 8 + ((100 - p.score) / 100) * 52)
                       const pathD = xs.map((x, i) => `${i === 0 ? 'M' : 'L'}${x},${ys[i]}`).join(' ')
-                      const areaD = pathD + ` L${xs[n-1]},80 L${xs[0]},80 Z`
+                      const areaD = pathD + ` L${xs[n-1]},65 L${xs[0]},65 Z`
                       return (
                         <>
                           <path d={areaD} fill="url(#moodgrad)" stroke="none"/>
                           <path d={pathD} fill="none" stroke="#818cf8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                           {moodPoints.map((p, i) => (
-                            <g key={i}>
-                              <circle cx={xs[i]} cy={ys[i]} r="3" fill="#818cf8"/>
-                              <text x={xs[i]} y="96" fontSize="8" fill="#9b8ec4" fontFamily="Inter" textAnchor="middle">{p.label}</text>
-                            </g>
+                            <circle key={i} cx={xs[i]} cy={ys[i]} r="3" fill="#818cf8"/>
                           ))}
                         </>
                       )
                     })()}
                   </svg>
+
+                  {/* Labels rendered in HTML — no stretching, crisp text */}
+                  <div style={{ position: 'relative', height: '20px', marginTop: '4px' }}>
+                    {(() => {
+                      const n = moodPoints.length
+                      return moodPoints.map((p, i) => {
+                        const pct = n === 1 ? 50 : (i / (n - 1)) * 100
+                        return (
+                          <span
+                            key={i}
+                            style={{
+                              position: 'absolute',
+                              left: `${pct}%`,
+                              transform: i === 0 ? 'none' : i === n - 1 ? 'translateX(-100%)' : 'translateX(-50%)',
+                              fontSize: '11px',
+                              fontFamily: 'Inter, sans-serif',
+                              fontWeight: 300,
+                              color: '#9b8ec4',
+                              whiteSpace: 'nowrap',
+                              letterSpacing: '0.2px',
+                            }}
+                          >
+                            {p.label}
+                          </span>
+                        )
+                      })
+                    })()}
+                  </div>
                 </div>
               )}
             </div>
