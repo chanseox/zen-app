@@ -15,7 +15,7 @@
 
 .title-container {
   position: fixed;
-  bottom: 30px;
+  top: 80px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 0;
@@ -31,7 +31,7 @@
 /* Wraps the Zen button + back link together, centered on screen */
 .start-section {
   position: fixed;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
