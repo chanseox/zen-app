@@ -58,21 +58,30 @@
     letter-spacing: 8px !important;
   }
 
+  .title-container {
+    top: auto !important;
+    bottom: 60px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .start-section {
+    top: 45% !important;
+    gap: 16px !important;
+  }
+
+  .back-to-instructions {
+    position: static !important;
+    font-size: 12px !important;
+    padding: 8px 16px !important;
+  }
+
   .main-screen {
     padding: 80px 20px 20px !important;
     justify-content: flex-start !important;
     min-height: 100vh;
     box-sizing: border-box;
     gap: 24px !important;
-  }
-
-  .back-to-instructions {
-    position: fixed !important;
-    top: 16px !important;
-    left: 90px !important;
-    font-size: 10px !important;
-    padding: 8px 16px !important;
-    z-index: 100 !important;
   }
 }
 
@@ -86,15 +95,15 @@
 /* ---- PRESS TO START ---- */
 @media (max-width: 768px) {
   .pts-component {
-    transform: scale(0.75) !important;
-    transform-origin: center top !important;
+    transform: scale(0.9) !important;
+    transform-origin: center !important;
   }
 }
 
 @media (max-width: 480px) {
   .pts-component {
-    transform: scale(0.65) !important;
-    transform-origin: center top !important;
+    transform: scale(0.8) !important;
+    transform-origin: center !important;
   }
 }
 
