@@ -4,6 +4,7 @@ import '../styles/Instructions.css';
 function Instructions({ onClose }) {
   return (
     <div className="instructions-comp">
+      <h1 className="zen-title">ZEN</h1>
       <p className="instructions-title">Instructions</p>
       <div className="instructions-steps">
         <div className="instruction-step">

@@ -5,6 +5,18 @@
   height: 100vh;
   position: relative;
   z-index: 0;
+  background: #f0eeff;
+  overflow: hidden;
+}
+
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .instructions {
@@ -23,9 +35,12 @@
 }
 
 .title-message {
-  color: white;
   font-size: 100px;
   font-weight: 100;
+  background: linear-gradient(135deg, #a855f7, #6366f1, #0ea5e9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Wraps the Zen button + back link together, centered on screen */
@@ -51,7 +66,7 @@
 .back-to-instructions {
   background: none;
   border: none;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(92, 72, 180, 0.6);
   font-size: 13px;
   letter-spacing: 0.06em;
   cursor: pointer;
@@ -61,20 +76,37 @@
 }
 
 .back-to-instructions:hover {
-  color: rgba(255, 255, 255, 0.95);
-  background: rgba(255, 255, 255, 0.1);
+  color: rgba(92, 72, 180, 0.95);
+  background: rgba(129, 140, 248, 0.1);
 }
 
+/* Bottom orb — matches DataViz/EmotionPage style */
 .home-background {
   position: absolute;
   left: 50%;
-  bottom: -11%;
+  bottom: -15%;
   transform: translateX(-50%);
-  z-index: -1;
-  width: 60vw;
-  height: 75vh;
-  background: linear-gradient(180deg, #2400FF 0%, #00FFD1 100%);
-  filter: blur(120px);
+  z-index: 0;
+  width: 65%;
+  height: 78%;
+  background: linear-gradient(180deg, #c084fc 0%, #818cf8 30%, #38bdf8 65%, #67e8f9 100%);
+  filter: blur(100px);
   border-radius: 50%;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+/* Top-left orb — matches other pages */
+.home-background::after {
+  content: '';
+  position: absolute;
+  left: -30%;
+  top: -40%;
+  width: 60%;
+  height: 65%;
+  background: linear-gradient(135deg, #f0abfc 0%, #c084fc 60%, #818cf8 100%);
+  filter: blur(90px);
+  border-radius: 50%;
+  opacity: 0.7;
   pointer-events: none;
 }
