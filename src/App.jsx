@@ -1,6 +1,7 @@
 import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Home from './pages/Home'
+import Start from './pages/Start'
 import Emotion from './pages/EmotionPage'
 import MeditationSession from './pages/MeditationSession'
 import MenuSelection from './components/MenuSelection'
@@ -17,6 +18,7 @@ function App () {
         <MenuSelection />
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/start' element={<Start />} />
           <Route path='/emotion' element={<Emotion />} />
           <Route path='/meditation_session' element={<MeditationSession />} />
           <Route path='/trigger_selection' element={<TriggerSelection />} />
