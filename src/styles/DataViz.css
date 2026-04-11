@@ -41,44 +41,42 @@
 .dv-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  padding: 28px 40px 0;
   margin-bottom: 24px;
   position: relative;
   z-index: 1;
-  padding-left: 130px;
 }
 
 .dv-title {
   font-size: 11px;
-  font-weight: 400;
-  letter-spacing: 5px;
+  font-weight: 300;
+  letter-spacing: 4px;
   text-transform: uppercase;
   background: linear-gradient(135deg, #a855f7, #6366f1, #0ea5e9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-/* Improved Home button */
 .dv-back-btn {
-  display: flex !important;
-  align-items: center !important;
-  gap: 6px !important;
-  padding: 9px 22px !important;
-  border: 1px solid rgba(129, 140, 248, 0.35) !important;
-  background: rgba(255, 255, 255, 0.7) !important;
-  color: #5046e5 !important;
-  font-family: 'Inter', sans-serif;
-  font-size: 12px !important;
-  font-weight: 400 !important;
-  letter-spacing: 1.5px;
+  padding: 12px 32px !important;
+  border: 1px solid rgba(99, 102, 241, 0.6) !important;
+  background: linear-gradient(135deg, #a855f7, #6366f1) !important;
+  color: white !important;
+  font-family: 'Inter', Avenir, Helvetica, Arial, sans-serif;
+  font-size: 11px !important;
+  font-weight: 300 !important;
+  letter-spacing: 3px;
   text-transform: uppercase;
   border-radius: 40px !important;
   cursor: pointer !important;
-  backdrop-filter: blur(16px);
-  box-shadow: 0 2px 12px rgba(99, 102, 241, 0.1) !important;
-  transition: background 0.25s, box-shadow 0.25s, border-color 0.25s !important;
+  backdrop-filter: blur(12px);
+  transition: opacity 0.3s !important;
   position: static !important;
   top: auto !important;
   left: auto !important;
@@ -86,12 +84,15 @@
   width: auto !important;
   height: auto !important;
   line-height: normal !important;
+  margin-left: auto;
+  box-shadow: none !important;
 }
 
 .dv-back-btn:hover {
-  background: rgba(255, 255, 255, 0.95) !important;
-  border-color: rgba(99, 102, 241, 0.5) !important;
-  box-shadow: 0 4px 18px rgba(99, 102, 241, 0.18) !important;
+  opacity: 0.85 !important;
+  background: linear-gradient(135deg, #a855f7, #6366f1) !important;
+  border-color: rgba(99, 102, 241, 0.6) !important;
+  box-shadow: none !important;
 }
 
 /* Stats */
@@ -101,7 +102,6 @@
   margin-bottom: 20px;
   position: relative;
   z-index: 1;
-  padding-left: 130px;
 }
 
 .dv-stat-card {
@@ -370,8 +370,8 @@
 
 @media (max-width: 768px) {
   .dv-page { padding: 80px 16px 40px; }
-  .dv-header { padding-left: 90px; }
-  .dv-stats { padding-left: 90px; flex-wrap: wrap; }
+  .dv-header { padding: 28px 40px 0; }
+  .dv-stats { flex-wrap: wrap; }
   .dv-stat-card { flex: 1; min-width: 72px; padding: 12px 14px; }
   .dv-stat-num { font-size: 24px; }
 }

@@ -13,7 +13,6 @@
 }
 
 /* ---- MENU ---- */
-/* Make menu button smaller on mobile so it takes less space */
 @media (max-width: 768px) {
   .menu-component {
     top: 12px !important;
@@ -299,7 +298,8 @@
   }
 
   .dv-header {
-    padding-left: 90px !important;
+    padding: 28px 16px 0 !important;
+    padding-left: 110px !important;
   }
 
   .dv-stats {

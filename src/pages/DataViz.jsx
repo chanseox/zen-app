@@ -130,7 +130,7 @@ export default function DataViz () {
 
       <div className='dv-header'>
         <p className='dv-title'>Data viz</p>
-        <button className='dv-back-btn' onClick={() => navigate('/')}>← Home</button>
+        <button className='dv-back-btn' onClick={() => navigate('/')}>Done</button>
       </div>
 
       {isEmpty ? (
