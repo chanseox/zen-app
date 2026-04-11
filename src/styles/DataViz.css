@@ -42,7 +42,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   position: relative;
   z-index: 1;
   padding-left: 130px;
@@ -50,8 +50,8 @@
 
 .dv-title {
   font-size: 11px;
-  font-weight: 300;
-  letter-spacing: 4px;
+  font-weight: 400;
+  letter-spacing: 5px;
   text-transform: uppercase;
   background: linear-gradient(135deg, #a855f7, #6366f1, #0ea5e9);
   -webkit-background-clip: text;
@@ -60,19 +60,25 @@
   margin: 0;
 }
 
+/* Improved Home button */
 .dv-back-btn {
-  padding: 8px 20px !important;
-  border: 1px solid rgba(129, 140, 248, 0.4) !important;
-  background: rgba(255, 255, 255, 0.6) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 9px 22px !important;
+  border: 1px solid rgba(129, 140, 248, 0.35) !important;
+  background: rgba(255, 255, 255, 0.7) !important;
   color: #5046e5 !important;
   font-family: 'Inter', sans-serif;
-  font-size: 11px !important;
-  font-weight: 300 !important;
-  letter-spacing: 2px;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
   border-radius: 40px !important;
   cursor: pointer !important;
-  backdrop-filter: blur(12px);
-  transition: background 0.3s !important;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 2px 12px rgba(99, 102, 241, 0.1) !important;
+  transition: background 0.25s, box-shadow 0.25s, border-color 0.25s !important;
   position: static !important;
   top: auto !important;
   left: auto !important;
@@ -83,43 +89,46 @@
 }
 
 .dv-back-btn:hover {
-  background: rgba(255, 255, 255, 0.85) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(99, 102, 241, 0.5) !important;
+  box-shadow: 0 4px 18px rgba(99, 102, 241, 0.18) !important;
 }
 
 /* Stats */
 .dv-stats {
   display: flex;
   gap: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   position: relative;
   z-index: 1;
   padding-left: 130px;
 }
 
 .dv-stat-card {
-  padding: 12px 24px;
-  background: rgba(255, 255, 255, 0.55);
-  border: 1px solid rgba(168, 139, 250, 0.2);
-  border-radius: 14px;
+  padding: 16px 28px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(168, 139, 250, 0.18);
+  border-radius: 16px;
   text-align: center;
   backdrop-filter: blur(12px);
-  min-width: 88px;
+  min-width: 96px;
 }
 
 .dv-stat-num {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 200;
   color: #6366f1;
   line-height: 1;
+  letter-spacing: -1px;
 }
 
 .dv-stat-label {
-  font-size: 10px;
-  font-weight: 300;
-  letter-spacing: 2px;
-  color: #7c6fa0;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: #9b8ec4;
   text-transform: uppercase;
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
 /* Grid */
@@ -132,10 +141,10 @@
 }
 
 .dv-card {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.55);
   border: 1px solid rgba(168, 139, 250, 0.15);
-  border-radius: 16px;
-  padding: 20px 22px;
+  border-radius: 18px;
+  padding: 22px 24px;
   backdrop-filter: blur(16px);
 }
 
@@ -144,12 +153,12 @@
 }
 
 .dv-card-title {
-  font-size: 10px;
-  font-weight: 300;
-  letter-spacing: 3px;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 4px;
   text-transform: uppercase;
-  color: #7c6fa0;
-  margin: 0 0 14px;
+  color: #9b8ec4;
+  margin: 0 0 18px;
 }
 
 .dv-no-data {
@@ -166,23 +175,23 @@
 .dv-bar-row {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 9px;
+  gap: 12px;
+  margin-bottom: 10px;
 }
 
 .dv-bar-row:last-child { margin-bottom: 0; }
 
 .dv-bar-label {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 300;
-  color: #3b3057;
-  width: 84px;
+  color: #4a3f70;
+  width: 88px;
   flex-shrink: 0;
 }
 
 .dv-bar-track {
   flex: 1;
-  height: 6px;
+  height: 5px;
   background: rgba(168, 139, 250, 0.1);
   border-radius: 4px;
   overflow: hidden;
@@ -195,7 +204,8 @@
 }
 
 .dv-bar-count {
-  font-size: 10px;
+  font-size: 11px;
+  font-weight: 300;
   color: #9b8ec4;
   width: 20px;
   text-align: right;
@@ -206,13 +216,13 @@
 .dv-wheel-wrap {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 24px;
 }
 
 .dv-wheel-legend {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 8px;
   flex: 1;
   min-width: 0;
 }
@@ -221,9 +231,9 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 300;
-  color: #3b3057;
+  color: #4a3f70;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -236,42 +246,47 @@
   flex-shrink: 0;
 }
 
-/* Plant tracker */
+/* Plant tracker — grid layout so columns always align */
 .dv-plant-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: 52px 1fr auto;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 9px;
+  gap: 16px;
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(168, 139, 250, 0.08);
 }
 
 .dv-plant-row:last-child { margin-bottom: 0; }
 
 .dv-plant-date {
   font-size: 10px;
+  font-weight: 400;
   color: #9b8ec4;
-  width: 52px;
-  flex-shrink: 0;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
 }
 
 .dv-plant-name {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 300;
   color: #3b3057;
-  flex: 1;
-  min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  text-align: left;
 }
 
 .dv-plant-status {
   font-size: 10px;
-  font-weight: 300;
-  padding: 3px 10px;
+  font-weight: 400;
+  padding: 4px 12px;
   border-radius: 20px;
   letter-spacing: 0.3px;
   white-space: nowrap;
-  flex-shrink: 0;
+  text-align: center;
 }
 
 .dv-status-good { background: rgba(99, 230, 190, 0.2); color: #0f6e56; }
@@ -282,7 +297,7 @@
 .dv-wordcloud {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px 12px;
+  gap: 10px 14px;
   align-items: baseline;
   padding: 4px 0;
 }
@@ -349,18 +364,14 @@
 
 /* Responsive */
 @media (max-width: 900px) {
-  .dv-grid {
-    grid-template-columns: 1fr;
-  }
-  .dv-card-wide {
-    grid-column: span 1;
-  }
+  .dv-grid { grid-template-columns: 1fr; }
+  .dv-card-wide { grid-column: span 1; }
 }
 
 @media (max-width: 768px) {
   .dv-page { padding: 80px 16px 40px; }
   .dv-header { padding-left: 90px; }
   .dv-stats { padding-left: 90px; flex-wrap: wrap; }
-  .dv-stat-card { flex: 1; min-width: 72px; padding: 10px 12px; }
-  .dv-stat-num { font-size: 22px; }
+  .dv-stat-card { flex: 1; min-width: 72px; padding: 12px 14px; }
+  .dv-stat-num { font-size: 24px; }
 }
