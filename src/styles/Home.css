@@ -18,6 +18,8 @@
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 0;
+  pointer-events: none;
 }
 
 .title-message {
@@ -29,13 +31,13 @@
 /* Wraps the Zen button + back link together, centered on screen */
 .start-section {
   position: fixed;
-  bottom: 100px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 24px;
 }
 
 /* Keep old .start-button class in case it's used elsewhere */
